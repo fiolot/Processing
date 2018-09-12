@@ -3,7 +3,7 @@ int lineDistance = 10;
 void setup()
 {
   size(480, 480);
-  //Setting width distance for the lines
+  //No matter the width or height it'll always go from corner to corner.
   lineWidthDistance = width/(height/lineDistance);
   println(lineWidthDistance); //Debug
 }
