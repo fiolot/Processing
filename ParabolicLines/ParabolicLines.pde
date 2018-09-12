@@ -11,7 +11,7 @@ void draw()
 {
   for(int i = 0; i < height; i += lineDistance)
   {
-    if(i%30 == 0)
+    if(i%(lineDistance * 3) == 0)
     stroke(0);
     else
     stroke(128);
