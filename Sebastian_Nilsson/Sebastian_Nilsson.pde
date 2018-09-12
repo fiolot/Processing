@@ -7,7 +7,7 @@ boolean weightSwitch = false;
 int r, g, b;
 void draw()
 {
-  background(18, 61, 148);
+  drawB();
   stroke(r, g, b);
   noFill();
   r += 1;
@@ -95,11 +95,11 @@ void draw()
   arc(126, 129, 20, 20, -3.1, -0.1);
   line(116, 120, 116, 150);
   line(135, 129, 135, 150);
-  drawB();
 }
 //Background
 void drawB()
 {
+  background(18, 61, 148);
   strokeWeight(backgroundWeight);
   stroke(0, 0, 0);
   fill(74, 65, 47);
