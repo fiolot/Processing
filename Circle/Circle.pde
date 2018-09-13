@@ -1,3 +1,4 @@
+int frames;
 void setup()
 {
   size(480, 480);
@@ -12,6 +13,7 @@ void spacing(float n)
 {
   for(int i = 0; i < n; i++)
   {
-    point(240 + sin(i * 2 *PI/n) * 100, 240 + cos(i * 2 * PI/n) * 100);
+    point(240 + sin(i * TWO_PI/n + frames) * 100, 240 + cos(i * TWO_PI/n + frames) * 100);
   }
+  frames++;
 }
