@@ -35,7 +35,7 @@ void draw()
 		fill(0);
 		text("Score: " + int(1000/log(mouseGuess.mag())), 10, height - 16);
 	}
-	if(keyPressed)
+	if(keyPressed && guessed)
 	{
 		guessed = false;
 		background(255);
