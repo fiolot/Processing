@@ -15,7 +15,7 @@ void draw()
   stroke(0, 255, 0);
   for(int i = 0; i < 100; i++)
   {
-    point(i * width/100, 360 + cos((i + frames) * 0.10) * -100);
+    point(i * width/100, 360 + cos((i * width/100 + frames) * 0.04) * -100);
   }
   //For fun
   /*stroke(0, 0, 255);
