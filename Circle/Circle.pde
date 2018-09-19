@@ -7,7 +7,9 @@ void setup()
 void draw()
 {
   background(255);
-  spacing(20);
+  spacing(25);
+  spiral(100);
+  frames++;
 }
 void spacing(float n)
 {
@@ -15,5 +17,12 @@ void spacing(float n)
   {
     point(240 + sin(i * TWO_PI/n + frames) * 100, 240 + cos(i * TWO_PI/n + frames) * 100);
   }
-  frames++;
+}
+
+void spiral(float n)
+{
+  for(int i = 0; i < n; i++)
+  {
+    point(240 + sin(i * TWO_PI/(n/2) + frames * 0.10) * i, 240 + cos(i * TWO_PI/(n/2) + frames * 0.10) * i);
+  }
 }
