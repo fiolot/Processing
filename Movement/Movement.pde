@@ -13,13 +13,19 @@ void draw()
   int currentTime = millis();
   frameTime = (currentTime - time) * 0.001;
   background(128);
-  if(ballPos.x < 0 || ballPos.x > width)
+  if(ballPos.x > width)
   {
   	ballPos.set(0, ballPos.y);
   }
-  if(ballPos.y < 0 || ballPos.y > height)
+  if(ballPos.y < 0)
   {
   	ballDir.set(ballDir.x, ballDir.y * -1);
+    ballPos.set(ballPos.x, 0);
+  }
+  else if(ballPos.y > height)
+  {
+    ballDir.set(ballDir.x, ballDir.y * -1);
+    ballPos.set(ballPos.x, height);
   }
   ballDir.normalize();
   ballDir.mult(vBall * frameTime);
