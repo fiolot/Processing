@@ -11,7 +11,6 @@ void setup()
 	background(255);
 	lineGuess.set(int(random(0, width)), int(random(0, height)));
 	text("X: " + lineGuess.x + " Y: " + lineGuess.y, 10, 16);
-	fill(255, 0, 0);
 	println(lineGuess);
 }
 void draw()
@@ -22,6 +21,7 @@ void draw()
 		guessed = true;
 		mouseGuess.set(mouseX, mouseY);
 		stroke(255, 0, 0);
+		fill(255, 0, 0);
 		line(0, 0, mouseGuess.x, mouseGuess.y);
 		ellipse(mouseGuess.x, mouseGuess.y, 4, 4);
 		stroke(0, 255, 0);
@@ -34,5 +34,14 @@ void draw()
 		println(mouseGuess.mag());
 		fill(0);
 		text("Score: " + int(1000/log(mouseGuess.mag())), 10, height - 16);
+	}
+	if(keyPressed)
+	{
+		guessed = false;
+		background(255);
+		lineGuess.set(int(random(0, width)), int(random(0, height)));
+		fill(0);
+		text("X: " + lineGuess.x + " Y: " + lineGuess.y, 10, 16);
+
 	}
 }
