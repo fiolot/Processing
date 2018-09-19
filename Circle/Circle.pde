@@ -25,6 +25,6 @@ void spiral(float n)
   stroke(0, 0, 255);
   for(int i = 0; i < n; i++)
   {
-    point(240 + sin(i * TWO_PI/(n/2) + frames * 0.10) * i, 240 + cos(i * TWO_PI/(n/2) + frames * 0.10) * i);
+    point(240 + sin(i * TWO_PI/(n/2) - frames * 0.10) * i, 240 + cos(i * TWO_PI/(n/2) - frames * 0.10) * i);
   }
 }
