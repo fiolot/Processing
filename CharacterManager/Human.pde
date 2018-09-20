@@ -3,6 +3,7 @@ class Human
 	PVector position;
 	PVector direction;
 	float speed;
+	boolean zombie;
 	public Human()
 	{
 		
@@ -16,12 +17,7 @@ class Human
 		speed = moveSpeed;
 		direction.x = random(-1, 1) * speed;
 		direction.y = random(-1, 1) * speed;
-	}
-	public Human(PVector pos, PVector dir, float moveSpeed)
-	{
-		position = pos;
-		direction = dir;
-		speed = moveSpeed;
+		zombie = false;
 	}
 	void Display()
 	{
