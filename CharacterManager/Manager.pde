@@ -23,7 +23,7 @@ public class Manager
 			people[i].Move();
 			for (int j = i + 1; j < amount; ++j)
 			{
-				boolean collide = Collision(people[i].position, people[j].position, 5, people[i].zombie);
+				boolean collide = Collision(people[i].position, people[j].position, 5);
 				if(collide)
 				{
 					people[j] = new Zombie(people[j].position, people[j].direction, humanSpeed);
@@ -35,13 +35,11 @@ public class Manager
 			people[i].Display();
 		}
 	}
-	boolean Collision(PVector pos1, PVector pos2, int size, boolean zombified)
+	boolean Collision(PVector pos1, PVector pos2, int size)
 	{
 		if(abs(pos1.x - pos2.x) > size || abs(pos1.y - pos2.y) > size * 2)
 			return false;
-		else if(zombified)
-			return true;
 		else
-			return false;
+			return true;
 	}
 }
