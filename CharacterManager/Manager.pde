@@ -25,9 +25,9 @@ public class Manager
 			{
 				boolean collide = Collision(people[i].position, people[j].position, 5);
 				if(collide && people[i].zombie)
-				{
 					people[j] = new Zombie(people[j].position, people[j].direction, humanSpeed);
-				}
+				else if(collide && people[j].zombie)
+					people[i] = new Zombie(people[i].position, people[i].direction, humanSpeed);
 			}
 		}
 		for(int i = 0; i < amount; i++)
