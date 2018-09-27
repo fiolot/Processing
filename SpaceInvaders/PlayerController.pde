@@ -25,21 +25,41 @@ void PlayerController()
 		{
 			case 0:
 				shots[bulletIndex] = new LaserShot(pPos, shipLength, bulletWidth);
-				bulletIndex += 1;
+				bulletIndex++;
 				break;
 			case 1:
 				shots[bulletIndex] = new LaserShot(pPos, shipLength, bulletWidth);
-				bulletIndex += 1;
+				bulletIndex++;
 				break;
 			case 2:
 				shots[bulletIndex] = new LaserShot(pPos, shipLength, bulletWidth);
-				bulletIndex += 1;
+				bulletIndex++;
 				break;
 			case 3:
 				shots[bulletIndex] = new LaserShot(pPos, shipLength, bulletWidth);
-				bulletIndex += 1;
+				bulletIndex++;
 				break;
 			case 4:
+				shots[bulletIndex] = new LaserShot(pPos, shipLength, bulletWidth);
+				bulletIndex++;
+				break;
+			case 5:
+				shots[bulletIndex] = new LaserShot(pPos, shipLength, bulletWidth);
+				bulletIndex++;
+				break;
+			case 6:
+				shots[bulletIndex] = new LaserShot(pPos, shipLength, bulletWidth);
+				bulletIndex++;
+				break;
+			case 7:
+				shots[bulletIndex] = new LaserShot(pPos, shipLength, bulletWidth);
+				bulletIndex++;
+				break;
+			case 8:
+				shots[bulletIndex] = new LaserShot(pPos, shipLength, bulletWidth);
+				bulletIndex++;
+				break;
+			case 9:
 				shots[bulletIndex] = new LaserShot(pPos, shipLength, bulletWidth);
 				bulletIndex = 0;
 				break;
