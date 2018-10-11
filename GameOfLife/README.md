@@ -1,3 +1,2 @@
 # GameOfLife
-
-![Screenshot](/GameOfLife.png)
+#+html: <p align="center"><img src="GameOfLife.png" /></p>
