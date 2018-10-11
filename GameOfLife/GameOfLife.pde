@@ -4,8 +4,10 @@ int colums, rows;
 float fillPercentage = 15;
 void setup()
 {
+	fullScreen();
+	//size(512, 512);
 	frameRate(5);
-	cellSize = 10;
+	cellSize = 4 ;
 	colums = (int)Math.floor(width/cellSize);
 	rows = (int)Math.floor(height/cellSize);
 	cells = new GameObject[colums][rows];
@@ -21,7 +23,6 @@ void setup()
 			}
 		}
 	}
-	size(512, 512);
 }
 void draw()
 {

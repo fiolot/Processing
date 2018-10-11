@@ -1,1 +1,3 @@
 # GameOfLife
+
+![Screenshot](/GameOfLife.png)
