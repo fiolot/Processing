@@ -2,6 +2,7 @@ GameObject cells[][];
 float cellSize;
 int colums, rows;
 float fillPercentage = 15;
+
 void setup()
 {
 	fullScreen();
@@ -24,6 +25,7 @@ void setup()
 		}
 	}
 }
+
 void draw()
 {
 	background(0);
@@ -38,13 +40,13 @@ void draw()
 		}
 	}
 }
+
 void NeighbourCount()
 {
 	for (int x = 0; x < colums; ++x)
 	{
 		for (int y = 0; y < rows; ++y)
 		{
-			//Reset neighbour count
 			cells[x][y].neighbours = 0;
 			//Scan surrounding for neighbours
 			for (int i = -1; i < 2; ++i)
@@ -62,13 +64,11 @@ void NeighbourCount()
 						tempY = 0;
 					else if(tempY < 0)
 						tempY = rows - 1;
-					//Is neighbour alive?
 					if(cells[tempX][tempY].alive)
 					{
 						//Skip counting neighbour if it's itself
 						if(x+i == x && y+j == y)
 							continue;
-						//Add to neighbour count
 						cells[x][y].neighbours++;
 					}
 				}
