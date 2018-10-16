@@ -17,7 +17,7 @@ void setup()
 	{
 		for(int y = 0; y < rows; y++)
 		{
-			cells[x][y] = new GameObject(x * cellSize, y * cellSize, cellSize);
+			cells[x][y] = new GameObject(x, y, cellSize);
 			if(random(0, 100) < fillPercentage)
 			{
 				cells[x][y].alive = true;
