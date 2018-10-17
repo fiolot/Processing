@@ -30,7 +30,6 @@ void draw()
 {
 	background(0);
 	NeighbourCount();
-	//Display first and update game objects afterwards
 	for (int x = 0; x < colums; ++x)
 	{
 		for (int y = 0; y < rows; ++y)
@@ -48,26 +47,24 @@ void NeighbourCount()
 		for (int y = 0; y < rows; ++y)
 		{
 			cells[x][y].neighbours = 0;
-			//Scan surrounding for neighbours
-			for (int i = -1; i < 2; ++i)
+			for (int deltaX = -1; deltaX < 2; ++deltaX)
 			{
-				int tempX = x + i;
-				for (int j = -1; j < 2; ++j)
+				int neighbourX = x + deltaX;
+				for (int deltaY = -1; deltaY < 2; ++deltaY)
 				{
-					int tempY = y + j;
+					int neighbourY = y + deltaY;
 					//If out of bounds, check from beginning/end
-					if(tempX >= colums)
-						tempX = 0;
-					else if(tempX < 0)
-						tempX = colums - 1;
-					if(tempY >= rows)
-						tempY = 0;
-					else if(tempY < 0)
-						tempY = rows - 1;
-					if(cells[tempX][tempY].alive)
+					if(neighbourX >= colums)
+						neighbourX = 0;
+					else if(neighbourX < 0)
+						neighbourX = colums - 1;
+					if(neighbourY >= rows)
+						neighbourY = 0;
+					else if(neighbourY < 0)
+						neighbourY = rows - 1;
+					if(cells[neighbourX][neighbourY].alive)
 					{
-						//Skip counting neighbour if it's itself
-						if(x+i == x && y+j == y)
+						if(neighbourX == x && neighbourY == y)
 							continue;
 						cells[x][y].neighbours++;
 					}
