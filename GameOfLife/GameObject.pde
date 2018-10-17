@@ -1,8 +1,8 @@
 public class GameObject
 {
 	float x, y, size;
-	int neighbours, counter;
-	int r, g, b;
+	int neighbours, fadeCounter;
+	int red, green, blue;
 	boolean alive = false;
 
 	public GameObject(float x, float y, float size)
@@ -14,7 +14,7 @@ public class GameObject
 
 	void Display()
 	{
-		fill(r, g, b, counter);
+		fill(red, green, blue, fadeCounter);
 		rect(this.x, this.y, this.size, this.size);
 	}
 
@@ -22,30 +22,30 @@ public class GameObject
 	{
 		if(alive)
 		{
-			counter = 255;
-			r = 50;
-			g = 50;
-			b = 150;
+			fadeCounter = 255;
+			red = 50;
+			green = 50;
+			blue = 150;
 			if(neighbours < 2 || neighbours > 3)
 			{
 				alive = false;
-				counter -= 100;
-				r = 200;
-				g = 50;
-				b = 50;
+				fadeCounter -= 100;
+				red = 200;
+				green = 50;
+				blue = 50;
 			}
 		}
 		else if(neighbours == 3)
 		{
 			alive = true;
-			counter = 255;
-			r = 50;
-			g = 255;
-			b = 50;
+			fadeCounter = 255;
+			red = 50;
+			green = 255;
+			blue = 50;
 		}
 		else
 		{
-			counter -= 100;
+			fadeCounter -= 100;
 		}
 	}
 	
