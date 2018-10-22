@@ -9,7 +9,7 @@ void setup()
 	slogan = createFont("Demonized.ttf", 32);
 	size(680, 720);
 	Stars(50);
-	HardDrives(10);
+	HardDrives(20);
 }
 void draw()
 {

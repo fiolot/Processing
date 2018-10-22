@@ -12,15 +12,18 @@ public class HardDrive
 	}
 	void Display(color border)
 	{
-		fill(128);
+		fill(96);
 		stroke(border);
 		rect(x, y, objectSize, objectSize/1.5f);
+		//Disk
 		ellipseMode(CENTER);
-		fill(96);
+		fill(128);
+		stroke(128);
 		ellipse(x + objectSize/3.2f, y + objectSize/3, objectSize/2, objectSize/2);
 		fill(0);
 		stroke(0);
-		ellipse(x + objectSize/3.2f, y + objectSize/3, objectSize/10, objectSize/10);
+		ellipse(x + objectSize/3.2f, y + objectSize/3, objectSize/12, objectSize/12);
+		//Reader
 		ellipse(x + objectSize/1.3f, y + objectSize/6, objectSize/5, objectSize/5);
 		line(x + objectSize/2.2f, y + objectSize/3, x + objectSize/1.3f, y + objectSize/5);
 		line(x + objectSize/2.2f, y + objectSize/3, x + objectSize/1.3f, y + objectSize/16);
